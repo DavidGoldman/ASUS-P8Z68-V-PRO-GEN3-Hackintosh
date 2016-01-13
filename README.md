@@ -46,7 +46,7 @@ Boot in verbose mode (-v as boot arg in the config.plist or add in the Clover op
 
 This will finish and you:
 - can also install the NVIDIA web drivers before restarting. It's working fine for me, but milage may vary based on your graphics card
-- replace EFI/CLOVER/drivers64UEFI/OsxAptioFix2Drv-64.efi with OsxAptioFixDrv-64.efi on the drive if you needed to do so for your USB
+- should replace EFI/CLOVER/drivers64UEFI/OsxAptioFix2Drv-64.efi with OsxAptioFixDrv-64.efi on the drive if you needed to do so for your USB
 - should restart your computer
 
 ## Booting from Mac OS X SSD/HDD
@@ -61,7 +61,7 @@ Here's how I fixed it:
 - Boot and select the drive in BIOS, booting into Clover. For me, it was named weird (like "UEFI: Clover start boot.efi at *USB*...")
 - Clover Boot Options -> Remove all Clover boot options
 - Clover Boot Options -> Add Clover boot options for all entries
-- Restart. Now I was able to boot Clover properly from my drive (option named "UEFI: Clover start boot.efi at El Capitan...")
+- Restart. Now I was able to boot Clover properly from my drive (option named "UEFI: Clover start boot.efi at *El Capitan*...")
 
 ## USB 3.0
 

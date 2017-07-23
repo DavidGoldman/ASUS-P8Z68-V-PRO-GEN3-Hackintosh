@@ -28,11 +28,11 @@ Download and install the latest version of [Clover](https://sourceforge.net/proj
 
 Definitely mount your EFI partition and see what's in `/EFI/Clover/drivers64UEFI/` both before and after installation, noting any differences as they may cause issues. Even a minor driver update could break things.
 
-If you can't boot after updating, boot up into your backup, mount your Hackintosh's EFI partition, and restore the old drivers based on the EFI folder that's on your desktop and/or on your backup's EFI partition. NOTE: You'll want to boot into your backup's Clover (not your main Hackintosh's Clover) from the BIOS.
+If you can't boot after updating, boot up into your backup, mount your Hackintosh's EFI partition, and restore the old drivers based on the EFI folder that's on your desktop and/or on your backup's EFI partition. **NOTE**: You'll want to boot into your backup's Clover (not your main Hackintosh's Clover) from the BIOS.
 
 ## Move your kexts in preparation for the update
 
-Any kexts that you've added should be put into `/EFI/CLOVER/kexts/Other`, NOT /Library/Extensions. If you've followed the main guide, that means you'll have to move `AppleIntelE1000e.kext`, `FakeSMC.kext`, and `realtekALC.kext`. Copy them into the clover folder and delete them from the old location.
+Any kexts that you've added should be put into `/EFI/CLOVER/kexts/Other`, NOT `/Library/Extensions`. If you've followed the main guide, that means you'll have to move `AppleIntelE1000e.kext`, `FakeSMC.kext`, and `realtekALC.kext`. Copy them into the clover folder and delete them from the old location.
 
 Restart to confirm that the computer is still working as you'd expect. If not, you'll probably want to update and move the kexts back into `/Library/Extensions` after.
 
@@ -53,7 +53,7 @@ See [this thread](https://www.tonymacx86.com/threads/solving-nvidia-driver-insta
 
 1) Select the `nv_disable=1` option when booting in Clover. This should disable all graphics acceleration, making it run like crap, but you should now have video output so you can fix it.
 2) Install [Lilu.kext](https://github.com/vit9696/Lilu) and [NvidiaGraphicsFixup.kext](https://sourceforge.net/projects/nvidiagraphicsfixup/)
-3) If using Nvidia web drivers, make sure you're on the latest updated version for Sierra.
+3) If using Nvidia web drivers, make sure you've installed the latest updated version for Sierra.
 4) If using Nvidia web drivers, make sure you follow [this guide](https://www.tonymacx86.com/threads/new-method-for-enabling-nvidia-web-drivers-in-clover.202341/) to use the correct flag for Sierra. This means removing `nvda_drv=1` as a boot arg and adding `NvidiaWeb` in `SystemParameters`.
 
 ## Fixing Audio (in/out devices not showing up)
